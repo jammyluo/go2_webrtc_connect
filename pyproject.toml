@@ -1,6 +1,6 @@
 [project]
 name = "unitree_webrtc_connect"
-version = "2.0.0"
+version = "2.0.1"
 description = "Connect to the Unitree Go2 and G1 with WebRTC"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -17,17 +17,15 @@ dependencies = [
     "lz4",
     "numpy",
     "packaging",
+    "sounddevice",
+    "pyaudio",
+    "pydub",
+    "opencv-python-headless"
 ]
 
-[project.optional-dependencies]
-dev = ["ruff>=0.8.1", "mypy>=1.13.0", "types-requests>=2.32"]
-audio = ["sounddevice", "pyaudio", "pydub"]
-video = ["opencv-python-headless"]
-
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
-
 
 [tool.setuptools.packages.find]
 where = ["."]

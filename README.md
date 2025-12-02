@@ -7,7 +7,7 @@ This repository contains a Python implementation of the WebRTC driver to connect
 ## Currently Supported Firmware Versions
 
 **Go2:**
-- **1.1.x series**: 1.1.1 – 1.1.8 *(latest available)*
+- **1.1.x series**: 1.1.1 – 1.1.11 *(latest available)*
 - **1.0.x series**: 1.0.19 – 1.0.25
 
 **G1:**
@@ -53,16 +53,25 @@ The driver supports three types of connection methods:
 ## Multicast scanner (Go2 only)
 The driver has a built-in Multicast scanner to find the Unitree Go2 on the local network and connect using only the serial number.
 
-
-## Installation
+## PIP installation (Recommended)
 
 ```sh
 cd ~
 sudo apt update
-sudo apt install python3-pip
-sudo apt install portaudio19-dev
-git clone https://github.com/legion1581/go2_webrtc_connect.git
-cd go2_webrtc_connect
+sudo apt install -y python3-pip portaudio19-dev
+pip install unitree_webrtc_connect
+```
+
+
+## Manual Installation 
+
+```sh
+cd ~
+sudo apt update
+sudo apt install -y python3-pip portaudio19-dev
+pip install --upgrade setuptools pip
+git clone https://github.com/legion1581/unitree_webrtc_connect.git
+cd unitree_webrtc_connect
 pip install -e .
 ```
 
